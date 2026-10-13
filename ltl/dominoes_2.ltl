@@ -1,0 +1,11 @@
+# A domino scenario
+# At some point the last domino is down with 90% probability
+P(top, F(b)) > 0.9
+]=
+
+# At some point the first domino falls with 99% probability
+P(top, F(a)) >= 1.0
+
+# if the first dominoe has fallen then the second will fall with 99% probability
+||
+P(F(a), F( a & (a -> F(b)))) >= 0.99

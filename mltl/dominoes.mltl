@@ -1,0 +1,16 @@
+# A domino scenario with time
+
+# At some point within 10 seconds the last domino is down with 90% probability
+P(top, F[0,10](G[0,10](c)) ) > 0.9
+]=
+
+# At some point the first domino falls with 99% probability
+P(top, F[0,10](G[0,10](a)) ) >= 0.99
+
+# if the first domino has fallen at some point than the second one will also fall 
+||
+P(F[0,10](a), F[0,10](G[0,10](b)) ) >= 0.99
+
+# if the second domino has fallen at some point than the third one will also fall 
+||
+P(F[0,10](b), F[0,10](G[0,10](c)) ) >= 0.99

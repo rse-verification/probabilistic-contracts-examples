@@ -1,0 +1,27 @@
+# A domino scenario
+# At some point the last domino is down with 90% probability
+P(top, F(f)) > 0.5
+]=
+
+# At some point the first domino falls with 99% probability
+P(top, F(a)) >= 1.0
+
+# if the first domino has fallen at some point than the second one will also fall 
+||
+P(F(a), F(b)) >= 0.99
+
+# if the second domino has fallen at some point than the third one will also fall 
+||
+P(F(b), F(c)) >= 0.99
+
+# if the second domino has fallen at some point than the third one will also fall 
+||
+P(F(c), F(d)) >= 0.99
+
+# if the second domino has fallen at some point than the third one will also fall 
+||
+P(F(d), F(e)) >= 0.99
+
+# if the second domino has fallen at some point than the third one will also fall 
+||
+P(F(e), F(f)) >= 0.99

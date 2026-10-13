@@ -1,0 +1,15 @@
+# A domino scenario
+# At some point the last domino is down with 90% probability
+P(top, F[0,10](c)) > 0.9
+]=
+
+# At some point the first domino falls with 99% probability
+P(top, F[0,1](a)) >= 1.0
+
+# second dominoe
+||
+P(F[0,1](a), F[0,1](a & (a -> F[0,1](b)))) >= 0.99
+
+# third dominoe
+||
+P(F[0,2](b), F[0,2](b & (b -> F[0,1](c)))) >= 0.99

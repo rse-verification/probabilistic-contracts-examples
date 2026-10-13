@@ -1,0 +1,23 @@
+# A domino scenario
+# At some point the last domino is down with 90% probability
+P(top, F[0,10000](e)) > 0.9
+]=
+
+# At some point the first domino falls with 99% probability
+P(top, F[0,1000](a)) >= 1.0
+
+# second dominoe
+||
+P(F[0,1000](a), F[0,1000](a & (a -> F[0,1000](b)))) >= 0.99
+
+# third dominoe
+||
+P(F[0,2000](b), F[0,2000](b & (b -> F[0,1000](c)))) >= 0.99
+
+# fourth dominoe
+||
+P(F[0,3000](c), F[0,3000](c & (c -> F[0,1000](d)))) >= 0.99
+
+# fifth dominoe
+||
+P(F[0,4000](d), F[0,4000](d & (d -> F[0,1000](e)))) >= 0.99

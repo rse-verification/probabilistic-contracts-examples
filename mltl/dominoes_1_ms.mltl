@@ -1,0 +1,6 @@
+# A domino scenario
+# At some point the last domino is down with 90% probability
+P(top, F[0,10000](a)) > 0.9
+]=
+# At some point the first domino falls with 99% probability
+P(top, F[0,10000](a)) >= 1.0
